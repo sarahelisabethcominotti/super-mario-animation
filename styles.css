@@ -1,0 +1,383 @@
+main {
+    background-color: #8AA2D3;
+    overflow: hidden;
+    max-width: 1920px;
+    max-height: 1080px;
+    margin-right: auto;
+}
+
+a {
+    color: white;
+}
+
+
+rect:not(.blue-mario-cover),
+.tower,
+circle {
+    filter: drop-shadow(1px 1px rgb(0 0 0 / 1))
+}
+
+.trigger:focus+.moving-trigger .jumping {
+    animation: move-mario 13s linear forwards, mario-jumping 13s forwards;
+}
+
+.trigger:focus+.moving-trigger .standing {
+    animation: move-mario 13s linear forwards, mario-standing 13s forwards;
+}
+
+.trigger:focus+.moving-trigger .blue-mario-cover {
+    animation: disappear forwards;
+}
+
+.trigger:focus+.moving-trigger .cactus-small {
+    animation: move-cactus 5s infinite;
+    animation-delay: 4s;
+}
+
+.trigger:focus+.moving-trigger .cactus-tall {
+    animation: move-cactus 6s infinite;
+    animation-delay: -1.7s;
+}
+
+.trigger:focus+.moving-trigger .first {
+    animation: disappear forwards;
+    animation-delay: 5.6s;
+}
+
+.trigger:focus+.moving-trigger .second {
+    animation: disappear forwards;
+    animation-delay: 6.6s;
+}
+
+.trigger:focus+.moving-trigger .third {
+    animation: disappear forwards;
+    animation-delay: 7.2s;
+}
+
+.clouds {
+    animation: move-clouds 30s infinite linear;
+}
+
+
+.trigger:focus+.moving-trigger .finish-line-flag {
+    animation: raise-finish-line 1s ease-in forwards;
+    animation-delay: 13s;
+}
+
+
+@keyframes disappear {
+    0% {
+        display: block
+    }
+
+    100% {
+        display: none
+    }
+}
+
+@keyframes move-cactus {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-120px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes move-clouds {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1000px);
+    }
+}
+
+@keyframes raise-finish-line {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-175px);
+    }
+}
+
+@keyframes move-mario {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    /* up */
+    15% {
+        transform: translateX(150px) translateY(-200px);
+    }
+
+    /* down */
+    23% {
+        transform: translateX(200px) translateY(-123px);
+    }
+
+    /* pause */
+    25% {
+        transform: translateX(200px) translateY(-123px);
+    }
+
+    /* up */
+    35% {
+        transform: translateX(275px) translateY(-220px);
+    }
+
+    /* down */
+    43% {
+        transform: translateX(350px) translateY(-150px);
+    }
+
+    /* pause */
+    45% {
+        transform: translateX(350px) translateY(-150px);
+    }
+
+    /* across */
+    57% {
+        transform: translateX(500px) translateY(-150px);
+    }
+
+    /* pause */
+    59% {
+        transform: translateX(500px) translateY(-150px);
+    }
+
+    /* up */
+    68% {
+        transform: translateX(580px) translateY(-250px);
+    }
+
+    /* down */
+    75% {
+        transform: translateX(650px) translateY(-195px);
+    }
+
+    /* pause */
+    77% {
+        transform: translateX(650px) translateY(-195px);
+    }
+
+    /* up */
+    85% {
+        transform: translateX(730px) translateY(-250px);
+    }
+
+    /* down */
+    100% {
+        transform: translateX(900px) translateY(-38px);
+    }
+}
+
+@keyframes mario-standing {
+    0% {
+        display: block;
+    }
+
+    0.1% {
+        display: none;
+    }
+
+    22.9% {
+        display: none;
+    }
+
+    23% {
+        display: block;
+    }
+
+    25.9% {
+        display: block;
+    }
+
+    26% {
+        display: none;
+    }
+
+    42.9% {
+        display: none;
+    }
+
+    43% {
+        display: block;
+    }
+
+    59.9% {
+        display: block;
+    }
+
+    60% {
+        display: none;
+    }
+
+    74.9% {
+        display: none;
+    }
+
+    75% {
+        display: block;
+    }
+
+    77.9% {
+        display: block;
+    }
+
+    78% {
+        display: none;
+    }
+
+    99.9% {
+        display: none;
+    }
+
+    100% {
+        display: block;
+    }
+}
+
+@keyframes mario-jumping {
+    0% {
+        display: none;
+    }
+
+    0.1% {
+        display: block;
+    }
+
+    22.9% {
+        display: block;
+    }
+
+    23% {
+        display: none;
+    }
+
+    25.9% {
+        display: none;
+    }
+
+    26% {
+        display: block;
+    }
+
+    42.9% {
+        display: block;
+    }
+
+    43% {
+        display: none;
+    }
+
+    59.9% {
+        display: none;
+    }
+
+    60% {
+        display: block;
+    }
+
+    74.9% {
+        display: block;
+    }
+
+    75% {
+        display: none;
+    }
+
+    77.9% {
+        display: none;
+    }
+
+    78% {
+        display: block;
+    }
+
+    99.9% {
+        display: block;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+
+/* .coin {
+    animation: jump-coins 2s infinite;
+} */
+
+
+.bolts, .level-completed-text {
+    filter: drop-shadow(2px 2px rgb(0 0 0 / 4))
+}
+
+.level-completed-text {
+    font-size: 75px
+}
+
+.winner-banner {
+    opacity: 0;
+}
+
+.trigger:focus+.moving-trigger .winner-banner {
+    animation: unhide-banner 0.1s linear forwards, winner-banner 2s linear infinite;
+    animation-delay: 14.2s;
+}
+
+
+
+@keyframes unhide-banner {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes winner-banner {
+    0% {
+        transform: scale(1);
+        transform-origin: center;
+    }
+
+    50% {
+        transform: scale(1.1);
+        transform-origin: center;
+    }
+
+    100% {
+        transform: scale(1);
+        transform-origin: center;
+    }
+
+}
+/* 
+@keyframes jump-coins {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+} */

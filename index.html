@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Homework Session 10</title>
+</head>
+
+<body>
+    <main width="1920" height="1080">
+        <div class="container">
+            <svg viewbox="0 0 1000 500" xlmns="http://www.w3.org/2000/svg">
+
+                <!-- bottom path -->
+                <rect class="bottom-path" y="450" width="1000" height="50" fill="#C75618" stroke="black"
+                    stroke-width="3"></rect>
+
+                <!-- clouds -->
+                <image width="1000" class="clouds" href="clouds.png" alt="moving clouds"></image>
+                <image x="1000" width="1000" class="clouds" href="clouds.png" alt="moving-clouds"></image>
+                <image x="2000" width="1000" class="clouds" href="clouds.png" alt="moving-clouds"></image>
+
+                <!-- floating path -->
+                <g class="floating-path">
+                    <rect x="350" y="300" width="200" height="40" rx="5" ry="5" stroke="black" stroke-width="3"
+                        fill="#C75618"></rect>
+                    <line x1="350" y1="313" x2="550" y2="313" stroke="black" stroke-width="3"></line>
+                    <line x1="350" y1="327" x2="550" y2="327" stroke="black" stroke-width="3"></line>
+                    <line x1="370" y1="300" x2="370" y2="312" stroke="black" stroke-width="3"></line>
+                    <line x1="400" y1="300" x2="400" y2="312" stroke="black" stroke-width="3"></line>
+                    <line x1="430" y1="300" x2="430" y2="312" stroke="black" stroke-width="3"></line>
+                    <line x1="460" y1="300" x2="460" y2="312" stroke="black" stroke-width="3"></line>
+                    <line x1="490" y1="300" x2="490" y2="312" stroke="black" stroke-width="3"></line>
+                    <line x1="520" y1="300" x2="520" y2="312" stroke="black" stroke-width="3"></line>
+                    <line x1="355" y1="312" x2="355" y2="326" stroke="black" stroke-width="3"></line>
+                    <line x1="385" y1="312" x2="385" y2="326" stroke="black" stroke-width="3"></line>
+                    <line x1="415" y1="312" x2="415" y2="326" stroke="black" stroke-width="3"></line>
+                    <line x1="445" y1="312" x2="445" y2="326" stroke="black" stroke-width="3"></line>
+                    <line x1="475" y1="312" x2="475" y2="326" stroke="black" stroke-width="3"></line>
+                    <line x1="505" y1="312" x2="505" y2="326" stroke="black" stroke-width="3"></line>
+                    <line x1="535" y1="312" x2="535" y2="326" stroke="black" stroke-width="3"></line>
+                    <line x1="370" y1="326" x2="370" y2="338" stroke="black" stroke-width="3"></line>
+                    <line x1="400" y1="326" x2="400" y2="338" stroke="black" stroke-width="3"></line>
+                    <line x1="430" y1="326" x2="430" y2="338" stroke="black" stroke-width="3"></line>
+                    <line x1="460" y1="326" x2="460" y2="338" stroke="black" stroke-width="3"></line>
+                    <line x1="490" y1="326" x2="490" y2="338" stroke="black" stroke-width="3"></line>
+                    <line x1="520" y1="326" x2="520" y2="338" stroke="black" stroke-width="3"></line>
+                </g>
+
+                <!-- start level button -->
+                <a class="trigger" xlink:href="#">
+                    <rect class="start-button" x="20" y="460" width="100px" height="30px" fill="black">
+                    </rect>
+                    <text class="start-level-text" x="34" y="480" fill="white">Start Level</text>
+                </a>
+
+                <!-- marios + finish flag + coins-->
+                <g class="moving-trigger">
+
+                    <!-- coins -->
+                    <image class="coin first" y="255" x="375" height="30" class="coin" href="coin.png"
+                        alt="super mario cactus">
+                    </image>
+                    <image class="coin second" y="255" x="435" height="30" class="coin" href="coin.png"
+                        alt="super mario cactus">
+                    </image>
+                    <image class="coin third" y="255" x="495" height="30" class="coin" href="coin.png"
+                        alt="super mario cactus">
+                    </image>
+
+                    <!-- finish line -->
+                    <polygon class="finish-line-flag" points="900,430, 945,405 945,450" fill="white" stroke="black"
+                        stroke-width="3"></polygon>
+                    <line class="finish-line" x1="945" y1="450" x2="945" y2="225" stroke="black" stroke-width="7">
+                    </line>
+                    <circle r="10" fill="gold" cx="945" cy="225" stroke="black" stroke-width="2"></circle>
+
+                    <!-- mario -->
+                    <image y="398" class="mario jumping" href="mario_jumping.png" alt="super mario jumping" height="50">
+                    </image>
+                    <rect class="blue-mario-cover" x="0" y="398" width="50px" height="50px" fill="#8AA2D3">
+                    </rect>
+                    <image y="398" x="10" class="mario standing" href=" mario_standing.png" alt="super mario standing"
+                        height="50">
+                    </image>
+
+                    <!-- tower -->
+                    <polygon class="tower"
+                        points="880,450 880,400 905,400 905,410 920,410 920,400, 945,400 945,410 960,410 960,400 985,400 985,450"
+                        fill="grey" stroke="black" stroke-width="3">
+                    </polygon>
+                    <line x1="887" y1="402" x2="887" y2="448" stroke="white" stroke-width="5"></line>
+
+                    <!-- cactus -->
+                    <image y="325" x="215" height="125" class="cactus-small" href="cactus.png" alt="super mario cactus">
+                    </image>
+                    <image y="255" x="660" height="125" class="cactus-tall" href="cactus.png" alt="super mario cactus">
+                    </image>
+
+                    <!-- tubes -->
+                    <g stroke="black" stroke-width="3" class="green-tube-high">
+                        <rect ry="3" rx="3" y="300" x="650" width="75" height="150" fill="#34B450"></rect>
+                        <rect ry="3" rx="3" y="255" x="637.5" width="100" height="50" fill="#34B450">
+                        </rect>
+                        <line x1="660" y1="449" x2="660" y2="307" stroke="white" stroke-width="7"></line>
+                        <line x1="647.5" y1="256" x2="647.5" y2="303" stroke="white" stroke-width="7"></line>
+
+                    </g>
+                    <g stroke="black" stroke-width="3" class="green-tube-low">
+                        <rect ry="3" rx="3" y="375" x="205" width="75" height="75" fill="#34B450"></rect>
+                        <rect ry="3" rx="3" y="325" x="192.5" width="100" height="50" fill="#34B450">
+                        </rect>
+                        <line x1="215" y1="449" x2="215" y2="378" stroke="white" stroke-width="7"></line>
+                        <line x1="202.5" y1="373" x2="202.5" y2="327" stroke="white" stroke-width="7"></line>
+                    </g>
+
+                    <!-- winner banner -->
+                    <g class="winner-banner">
+                        <rect ry="3" rx="3" y="120" x="300" width="400" height="200" fill="#C75618" stroke-width="3"
+                            stroke="black"></rect>
+                        <text class="level-completed-text" x="430" y="190" fill="white">level</text>
+                        <text class="level-completed-text" x="335" y="280" fill="white">completed</text>
+                        <circle class="bolts" r="5" fill="white" cx="690" cy="130"></circle>
+                        <circle class="bolts" r="5" fill="white" cx="310" cy="130"></circle>
+                        <circle class="bolts" r="5" fill="white" cx="690" cy="310"></circle>
+                        <circle class="bolts" r="5" fill="white" cx="310" cy="310"></circle>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </main>
+</body>
+
+</html>
+
